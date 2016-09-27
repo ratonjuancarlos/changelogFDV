@@ -1,7 +1,6 @@
 const fse = require('fs-extra');
 const exec = require('child_process').exec;
 const _ = require('lodash');
-const changeCase = require('change-case');
 
 const cmd =  require('./lib/gitLog');
 const updateFields =  require('./lib/updateFields');
