@@ -25,6 +25,7 @@ exports.generateChangeLog = function() {
 
 
         result = updateFields(result);
+console.log(result)
 
 
 
