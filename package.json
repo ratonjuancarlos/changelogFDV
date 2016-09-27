@@ -75,6 +75,7 @@
   "_where": "/home/pablo/projects/Intelligize.UI",
   "author": "",
   "dependencies": {
+    "change-case": "^3.0.0",
     "fs-extra": "^0.30.0",
     "lodash": "^4.16.2"
   },
