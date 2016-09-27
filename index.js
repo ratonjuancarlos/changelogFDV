@@ -1,5 +1,4 @@
 const fse = require('fs-extra');
-const fs = require('fs');
 const exec = require('child_process').exec;
 const _ = require('lodash');
 const changeCase = require('change-case');
@@ -13,7 +12,8 @@ const commitItem =  require('./lib/commitItem');
 
 exports.generateChangeLog = function() {
     let result = {};
-    stream = fse.createOutputStream('CHANGELOG.html');
+    let stream;
+    stream = fse.createWriteStream('CHANGELOG.html');
 
     exec(cmd, function(error, stdout, stderr) {
         stdout = stdout.substring(0, stdout.length - 1);
@@ -58,3 +58,7 @@ exports.generateChangeLog = function() {
         stream.end();
     });
 }
+
+this.generateChangeLog();
+
+// module.exports = generateChangeLog;
