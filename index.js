@@ -2,7 +2,7 @@ const fse = require('fs-extra');
 const exec = require('child_process').exec;
 const _ = require('lodash');
 
-const cmd =  require('./lib/gitLog');
+const cmdUnix =  require('./lib/gitLog');
 const cmdWin =  require('./lib/gitLogWin');
 const updateFields =  require('./lib/updateFields');
 const commitItem =  require('./lib/commitItem');
@@ -17,9 +17,7 @@ exports.generateChangeLog = function() {
 
     var isWin = /^win/.test(process.platform);
 
-    cmd = isWin ? cmdWin : cmd;
-
-    console.log(cmd)
+    let cmd = (isWin) ? cmdWin : cmdUnix;
 
     exec(cmd, function(error, stdout, stderr) {
         stdout = stdout.substring(0, stdout.length - 1);
