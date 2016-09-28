@@ -19,37 +19,45 @@ exports.generateChangeLog = function() {
 
     let cmd = (isWin) ? cmdWin : cmdUnix;
 
+    console.log("Running git log for " + (isWin) ? 'Windows' : 'Not Windows');
     exec(cmd, function(error, stdout, stderr) {
         stdout = stdout.substring(0, stdout.length - 1);
         stdout = '[' + stdout + ']';
         result = JSON.parse(stdout);
 
+        console.log("Starting HTML doc...");
         stream.write('<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>');
+        console.log("Adding styles...");
 		stream.write(styles);
         stream.write('<h1>Intelligize changelog</h1>');
 
 
+        console.log("Updating fields from json...");
         result = updateFields(result);
 
 
 
+        console.log("Grouping json by date");
         let resultByDate = _.groupBy(result, 'date');
 		
 		for (let dateCommit in resultByDate) {
 		    stream.write('<h2>' + dateCommit + '</h2>');
 
 		    if (resultByDate.hasOwnProperty(dateCommit)) {
+        		console.log("Grouping by date and commit");
 		        let byBranch = _.groupBy(resultByDate[dateCommit], 'branchType');
 		    
 		        for (let branchTypeCommit in byBranch) {
 		            stream.write('<h3>' + branchTypeCommit + '</h3>');
 		    
+        			console.log("Sorting by branch type");
 		            byIssue = _.orderBy(byBranch[branchTypeCommit], ['issueClean'], ['desc']);
 
         			stream.write('<ul>');
 		    
 		            for (let issue in byIssue) {
 		            	let commit = byIssue[issue]
+        				console.log("Rendering commits");
 		                stream.write( commitItem(commit) );
 
 		            }
