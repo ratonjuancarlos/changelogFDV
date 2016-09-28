@@ -3,6 +3,7 @@ const exec = require('child_process').exec;
 const _ = require('lodash');
 
 const cmd =  require('./lib/gitLog');
+const cmdWin =  require('./lib/gitLogWin');
 const updateFields =  require('./lib/updateFields');
 const commitItem =  require('./lib/commitItem');
 
@@ -13,6 +14,12 @@ exports.generateChangeLog = function() {
 	let result = {};
     let stream;
     stream = fse.createWriteStream('CHANGELOG.html');
+
+    var isWin = /^win/.test(process.platform);
+
+    cmd = isWin ? cmdWin : cmd;
+
+    console.log(cmd)
 
     exec(cmd, function(error, stdout, stderr) {
         stdout = stdout.substring(0, stdout.length - 1);
@@ -25,7 +32,6 @@ exports.generateChangeLog = function() {
 
 
         result = updateFields(result);
-console.log(result)
 
 
 
