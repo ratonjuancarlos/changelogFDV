@@ -32,21 +32,9 @@
         }
       },
       "/home/pablo/projects/Intelligize.UI"
-    ],
-    [
-      {
-        "raw": "changelogFDV",
-        "scope": null,
-        "escapedName": "changelogFDV",
-        "name": "changelogFDV",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "/home/pablo/projects/Intelligize.UI"
     ]
   ],
-  "_from": "changelogFDV",
+  "_from": "git+https://github.com/ratonjuancarlos/changelogFDV.git",
   "_id": "changelogFDV@1.0.0",
   "_inCache": true,
   "_installable": true,
@@ -69,21 +57,31 @@
     "rimraf": "2.5.4"
   },
   "_requested": {
-    "raw": "changelogFDV",
+    "raw": "https://github.com/ratonjuancarlos/changelogFDV.git",
     "scope": null,
-    "escapedName": "changelogFDV",
-    "name": "changelogFDV",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/ratonjuancarlos/changelogFDV.git",
+    "spec": "git+https://github.com/ratonjuancarlos/changelogFDV.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:ratonjuancarlos/changelogFDV.git",
+      "sshUrl": "git+ssh://git@github.com/ratonjuancarlos/changelogFDV.git",
+      "httpsUrl": "git+https://github.com/ratonjuancarlos/changelogFDV.git",
+      "gitUrl": "git://github.com/ratonjuancarlos/changelogFDV.git",
+      "shortcut": "github:ratonjuancarlos/changelogFDV",
+      "directUrl": "https://raw.githubusercontent.com/ratonjuancarlos/changelogFDV/master/package.json"
+    }
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/changelogFDV/-/changelogFDV-1.0.0.tgz",
-  "_shasum": "4e3446b329a2414fcd306621d5a460fac95a3ad6",
+  "_resolved": "git+https://github.com/ratonjuancarlos/changelogFDV.git#513a09c4ce2785cffc0f94f7c925b03024da4c3b",
+  "_shasum": "1ff2b16df8bac4085b12a4eb22c5efee3a53a6e2",
   "_shrinkwrap": null,
-  "_spec": "changelogFDV",
+  "_spec": "https://github.com/ratonjuancarlos/changelogFDV.git",
   "_where": "/home/pablo/projects/Intelligize.UI",
   "author": "",
   "bin":{
