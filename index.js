@@ -34,7 +34,7 @@ exports.generateChangeLog = function() {
         result = JSON.parse(stdout);
 
         // console.log("Starting HTML doc...");
-        stream.write('<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>');
+        stream.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="style-src \'self\' \'unsafe-inline\'"></head><body>');
         // console.log("Adding styles...");
 		stream.write(styles);
         stream.write('<h1>Intelligize changelog</h1>');
