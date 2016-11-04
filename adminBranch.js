@@ -131,7 +131,9 @@ inquirer.prompt([
       return true;
     },
     filter: function (answer) {
-      return answer.replace(/["'\s]/gi, '');
+       answer = answer.replace(/["']/gi, '');
+       answer = answer.replace(/[\s]/gi, '-');
+       return answer;
     }
   }
 ]).then(function (answers) {
@@ -147,6 +149,6 @@ inquirer.prompt([
   }
 
   let createBranch = answers.branchType + '/' + answers.project + '-' + answers.issueNumber + '-' + answers.description ;
-
+  
   shell.exec(bootstrapBranch + createBranch, {silent:true}).stdout
 });
