@@ -82,8 +82,7 @@
   "author": "",
   "bin": {
     "changelogFDV": "./index.js",
-    "createBranch": "./adminBranch.js --create",
-    "renameBranch": "./adminBranch.js --rename"
+    "adminBranch": "./adminBranch.js"
   },
   "dependencies": {
     "fs-extra": "^0.30.0",
