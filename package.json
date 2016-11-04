@@ -32,71 +32,71 @@
         }
       },
       "/home/pablo/projects/Intelligize.UI"
+    ],
+    [
+      {
+        "raw": "changelogFDV@^1.0.1",
+        "scope": null,
+        "escapedName": "changelogFDV",
+        "name": "changelogFDV",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "/home/pablo/projects/intelligize2"
     ]
   ],
-  "_from": "git+https://github.com/ratonjuancarlos/changelogFDV.git",
-  "_id": "changelogFDV@1.0.0",
+  "_from": "changelogFDV@^1.0.1",
+  "_id": "changelogFDV@1.0.10",
   "_inCache": true,
   "_installable": true,
   "_location": "/changelogFDV",
   "_nodeVersion": "6.6.0",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/changelogFDV-1.0.0.tgz_1475169875810_0.31160553405061364"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/changelogFDV-1.0.10.tgz_1478092215590_0.9605186863336712"
   },
   "_npmUser": {
     "name": "pabloh",
     "email": "pablo.hiyano@gmail.com"
   },
   "_npmVersion": "3.10.3",
-  "_phantomChildren": {
-    "graceful-fs": "4.1.6",
-    "jsonfile": "2.3.1",
-    "klaw": "1.3.0",
-    "path-is-absolute": "1.0.0",
-    "rimraf": "2.5.4"
-  },
+  "_phantomChildren": {},
   "_requested": {
-    "raw": "https://github.com/ratonjuancarlos/changelogFDV.git",
+    "raw": "changelogFDV@^1.0.1",
     "scope": null,
-    "escapedName": null,
-    "name": null,
-    "rawSpec": "https://github.com/ratonjuancarlos/changelogFDV.git",
-    "spec": "git+https://github.com/ratonjuancarlos/changelogFDV.git",
-    "type": "hosted",
-    "hosted": {
-      "type": "github",
-      "ssh": "git@github.com:ratonjuancarlos/changelogFDV.git",
-      "sshUrl": "git+ssh://git@github.com/ratonjuancarlos/changelogFDV.git",
-      "httpsUrl": "git+https://github.com/ratonjuancarlos/changelogFDV.git",
-      "gitUrl": "git://github.com/ratonjuancarlos/changelogFDV.git",
-      "shortcut": "github:ratonjuancarlos/changelogFDV",
-      "directUrl": "https://raw.githubusercontent.com/ratonjuancarlos/changelogFDV/master/package.json"
-    }
+    "escapedName": "changelogFDV",
+    "name": "changelogFDV",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#DEV:/"
   ],
-  "_resolved": "git+https://github.com/ratonjuancarlos/changelogFDV.git#513a09c4ce2785cffc0f94f7c925b03024da4c3b",
-  "_shasum": "1ff2b16df8bac4085b12a4eb22c5efee3a53a6e2",
+  "_resolved": "https://registry.npmjs.org/changelogFDV/-/changelogFDV-1.0.10.tgz",
+  "_shasum": "b56976956984b3f4f3153b4f553bab2feee027a5",
   "_shrinkwrap": null,
-  "_spec": "https://github.com/ratonjuancarlos/changelogFDV.git",
-  "_where": "/home/pablo/projects/Intelligize.UI",
+  "_spec": "changelogFDV@^1.0.1",
+  "_where": "/home/pablo/projects/intelligize2",
   "author": "",
   "bin": {
-    "changelogFDV": "./index.js"
+    "changelogFDV": "./index.js",
+    "createBranch": "./adminBranch.js --create",
+    "renameBranch": "./adminBranch.js --rename"
   },
   "dependencies": {
     "fs-extra": "^0.30.0",
+    "html-metadata": "1.4.4",
+    "inquirer": "1.2.2",
     "lodash": "^4.16.2",
     "shelljs": "0.7.5"
   },
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "4e3446b329a2414fcd306621d5a460fac95a3ad6",
-    "tarball": "https://registry.npmjs.org/changelogFDV/-/changelogFDV-1.0.0.tgz"
+    "shasum": "b56976956984b3f4f3153b4f553bab2feee027a5",
+    "tarball": "https://registry.npmjs.org/changelogFDV/-/changelogFDV-1.0.10.tgz"
   },
   "gitHead": "513a09c4ce2785cffc0f94f7c925b03024da4c3b",
   "keywords": [],
